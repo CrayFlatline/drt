@@ -1,0 +1,66 @@
+---
+description: Doxygen-style docs; English comments; ASD-STE100 Simplified Technical English
+globs: "**/*.{swift,h,hpp,c,cpp,m,mm,kt,kts}"
+alwaysApply: false
+---
+
+# Code documentation (Doxygen + ASD-STE100)
+
+## Language
+
+- Write **all** comments and doc comments in **English**.
+- Follow **ASD-STE100** (Simplified Technical English):
+  - Short sentences. One idea per sentence.
+  - Active voice. Use simple, approved everyday words.
+  - Same term for the same thing. Do not mix synonyms.
+  - No slang, jokes, or vague words (`somehow`, `stuff`, `correctly`).
+  - Prefer verbs over noun stacks.
+
+## What to document
+
+- **Every** function, method, type, and protocol: Doxygen-style doc comment.
+- **Important** non-obvious places (invariants, gates, units, thread rules, failure modes): one short line or a small block. Do not narrate obvious code.
+
+## Swift / ObjC style
+
+Use `///` (or `/** … */`) with Doxygen tags where useful:
+
+```swift
+/// Builds a driving route between two points.
+///
+/// - Parameters:
+///   - from: Start coordinate (WGS84).
+///   - to: End coordinate (WGS84).
+/// - Returns: Route with polyline and steps.
+/// - Throws: `RoutingError` if the network or decode step fails.
+func route(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) async throws -> Route
+```
+
+```swift
+// Ignore stale responses after Clear or a newer Build.
+guard generation == requestGeneration else { return }
+```
+
+## Do / Don't
+
+```swift
+// ❌ BAD — Ukrainian, vague, no API doc
+// тут якось парсимо відповідь
+func parse(_ data: Data) throws -> Route
+
+// ❌ BAD — noise
+/// This function parses the data and returns a route.
+func parse(_ data: Data) throws -> Route
+
+// ✅ GOOD
+/// Parses an OSRM JSON body into a route model.
+///
+/// - Parameter data: Raw HTTP response body.
+/// - Returns: Normalized route.
+/// - Throws: `RoutingError.emptyRoutes` or `RoutingError.decode`.
+func parse(_ data: Data) throws -> Route
+```
+
+## Scope
+
+Applies to new and changed code. Do not mass-rewrite unrelated files unless the task asks for it.
