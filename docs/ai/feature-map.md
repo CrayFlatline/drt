@@ -87,7 +87,7 @@ graph TD
 - **Опис:** Xcode/SwiftUI каркас додатку, підпис Personal Team, дозволи Location/Motion, базова навігація екранів.
 - **Залежності:** —
 - **Пріоритет:** High
-- **Статус:** Planned
+- **Статус:** Merged to `master` (`bf06d3e`)
 - **Ключове:** App target; Info.plist usage strings; Developer Mode notes; порожній shell під модулі.
 
 ### ID: `feature-map-routing`
@@ -95,7 +95,7 @@ graph TD
 - **Опис:** MapLibre карта; вибір A/B; запит маршруту до OSRM; полілінія + базова геометрія маршруту для snap.
 - **Залежності:** `feature-project-infrastructure`
 - **Пріоритет:** High
-- **Статус:** Planned
+- **Статус:** In PR (#1) — manual verify on Xcode machine
 - **Ключове:** `RoutingClient`; відображення маршруту; помилка якщо OSRM недоступний (не стартувати сесію).
 
 ### ID: `feature-sensor-hub`
