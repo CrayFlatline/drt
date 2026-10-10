@@ -95,7 +95,7 @@ graph TD
 - **Опис:** MapLibre карта; вибір A/B; запит маршруту до OSRM; полілінія + базова геометрія маршруту для snap.
 - **Залежності:** `feature-project-infrastructure`
 - **Пріоритет:** High
-- **Статус:** In PR (#1) — manual verify on Xcode machine
+- **Статус:** Merged (`2be3f83` / PR #1) — manual verify still on Xcode machine
 - **Ключове:** `RoutingClient`; відображення маршруту; помилка якщо OSRM недоступний (не стартувати сесію).
 
 ### ID: `feature-sensor-hub`
