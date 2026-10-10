@@ -58,13 +58,60 @@ final class FusionNavTests: XCTestCase {
             magTrusted: false
         )
         // Accumulate longer than zuptMinDurationSec.
+        var eventCount = 0
         for _ in 0..<10 {
             ahrs.predict(imu: still, dt: 0.1)
             ins.predict(imu: still, headingRad: ahrs.headingRad, dt: 0.1)
             nav.predict(from: ins, headingRad: ahrs.headingRad, imu: still, dt: 0.1, config: config)
+            if nav.lastZUPT != nil { eventCount += 1 }
         }
-        XCTAssertNotNil(nav.lastZUPT)
+        XCTAssertEqual(eventCount, 1, "ZUPT must fire once when entering the hold")
         XCTAssertEqual(nav.state.speedMps, 0, accuracy: 1e-9)
+    }
+
+    /// Leaving stillness clears the latch so a later stop can ZUPT again.
+    func testZUPTCanReenterAfterMotion() {
+        let geometry = makeEastRoute()
+        let ahrs = SwiftAHRS()
+        let ins = SwiftINS()
+        let nav = SwiftNavFilter()
+        let config = FusionConfig.default
+        seed(nav: nav, ahrs: ahrs, ins: ins, geometry: geometry, config: config)
+
+        let still = IMUSample(
+            timestamp: Date(),
+            attitude: simd_quatd(ix: 0, iy: 0, iz: 0, r: 1),
+            userAcceleration: SIMD3(0.01, 0, 0),
+            rotationRate: SIMD3(0.01, 0, 0),
+            headingDegrees: nil,
+            headingAccuracy: -1,
+            magTrusted: false
+        )
+        let moving = IMUSample(
+            timestamp: Date(),
+            attitude: simd_quatd(ix: 0, iy: 0, iz: 0, r: 1),
+            userAcceleration: SIMD3(0.5, 0, 0),
+            rotationRate: SIMD3(0.2, 0, 0),
+            headingDegrees: nil,
+            headingAccuracy: -1,
+            magTrusted: false
+        )
+        var entered = 0
+        for _ in 0..<10 {
+            nav.predict(from: ins, headingRad: 0, imu: still, dt: 0.1, config: config)
+            if nav.lastZUPT != nil { entered += 1 }
+        }
+        XCTAssertEqual(entered, 1)
+        XCTAssertTrue(nav.isHoldingZUPT)
+        nav.predict(from: ins, headingRad: 0, imu: moving, dt: 0.1, config: config)
+        XCTAssertFalse(nav.isHoldingZUPT)
+        entered = 0
+        for _ in 0..<10 {
+            nav.predict(from: ins, headingRad: 0, imu: still, dt: 0.1, config: config)
+            if nav.lastZUPT != nil { entered += 1 }
+        }
+        XCTAssertEqual(entered, 1)
+        XCTAssertTrue(nav.isHoldingZUPT)
     }
 
     /// One predict step keeps finite sigma and snapped coordinates.

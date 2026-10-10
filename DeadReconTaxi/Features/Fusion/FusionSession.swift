@@ -53,6 +53,8 @@ final class FusionSession: ObservableObject {
     private var recordingCancellable: AnyCancellable?
     private var lastIMUTime: Date?
     private var lastEmitTime: Date?
+    /// True after the one-shot magnetometer heading seed at session start.
+    private var didSeedMagHeading = false
 
     /// Creates a session with injectable fusion layers.
     ///
@@ -110,6 +112,7 @@ final class FusionSession: ObservableObject {
         lastNav = nil
         lastIMUTime = nil
         lastEmitTime = nil
+        didSeedMagHeading = false
         zuptActive = false
         banner = nil
 
@@ -169,9 +172,10 @@ final class FusionSession: ObservableObject {
         }
         lastIMUTime = sample.timestamp
 
-        // Seed heading from first trusted mag if available.
-        if sample.magTrusted, let degrees = sample.headingDegrees, drTrack.count <= 1 {
+        // One-shot seed from the first trusted magnetometer heading.
+        if !didSeedMagHeading, sample.magTrusted, let degrees = sample.headingDegrees {
             ahrs.reset(initialHeadingRad: degrees * .pi / 180)
+            didSeedMagHeading = true
         }
 
         ahrs.predict(imu: sample, dt: dt)
@@ -184,7 +188,7 @@ final class FusionSession: ObservableObject {
             config: config
         )
         lastNav = navState
-        zuptActive = nav.lastZUPT != nil
+        zuptActive = nav.isHoldingZUPT
 
         if let zupt = nav.lastZUPT {
             logStore?.appendEncodedLine(

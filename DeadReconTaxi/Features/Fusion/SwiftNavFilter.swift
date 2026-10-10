@@ -23,6 +23,8 @@ final class SwiftNavFilter: NavFiltering {
     private(set) var lastSnap: SnapResult?
     /// Accumulated low-motion time for ZUPT.
     private var lowMotionSec: Double = 0
+    /// True while the filter is already inside an active ZUPT hold.
+    private(set) var isHoldingZUPT = false
 
     /// Loads route geometry and an initial snapped state.
     ///
@@ -35,6 +37,7 @@ final class SwiftNavFilter: NavFiltering {
         lastZUPT = nil
         lastSnap = nil
         lowMotionSec = 0
+        isHoldingZUPT = false
     }
 
     /// Pulls INS pose, applies ZUPT when still, and hard-projects onto the route.
@@ -69,17 +72,23 @@ final class SwiftNavFilter: NavFiltering {
                 + imu.rotationRate.z * imu.rotationRate.z
         )
 
-        if accelMag <= config.zuptAccelMaxG && gyroMag <= config.zuptGyroMaxRadPerSec {
+        let still = accelMag <= config.zuptAccelMaxG && gyroMag <= config.zuptGyroMaxRadPerSec
+        if still {
             lowMotionSec += safeDt
         } else {
             lowMotionSec = 0
+            isHoldingZUPT = false
         }
 
-        if lowMotionSec >= config.zuptMinDurationSec {
+        if still && lowMotionSec >= config.zuptMinDurationSec {
             ins.applyZeroVelocity()
-            lastZUPT = ZUPTEvent(timestamp: imu.timestamp, durationSec: lowMotionSec)
             state.speedMps = 0
-            state.sigma.speedMps = max(0.1, state.sigma.speedMps * 0.5)
+            // Emit one event when entering ZUPT; keep holding without log spam.
+            if !isHoldingZUPT {
+                lastZUPT = ZUPTEvent(timestamp: imu.timestamp, durationSec: lowMotionSec)
+                state.sigma.speedMps = max(0.1, state.sigma.speedMps * 0.5)
+                isHoldingZUPT = true
+            }
         } else {
             state.speedMps = ins.speedMps
         }

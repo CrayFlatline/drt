@@ -138,8 +138,11 @@ protocol NavFiltering: AnyObject {
     /// Current snapped navigation state.
     var state: NavState { get }
 
-    /// Last ZUPT event produced by `predict`, if any.
+    /// Last ZUPT event produced by `predict`, if any (edge only).
     var lastZUPT: ZUPTEvent? { get }
+
+    /// True while the filter is holding a ZUPT after the enter event.
+    var isHoldingZUPT: Bool { get }
 
     /// Last snap result from `predict`.
     var lastSnap: SnapResult? { get }

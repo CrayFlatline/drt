@@ -29,7 +29,12 @@ description: Layered GPS-denied fusion + FusionLab dual-track
 - Simulator unit tests green (`CODE_SIGNING_ALLOWED=NO`)
 - Device `/manual-testing` explicitly deferred (path C): Personal Team max devices / ineligible membership
 
+## Review fixes (PR #4)
+
+- ZUPT: edge-triggered event + `isHoldingZUPT` latch (no JSONL spam)
+- Mag seed: one-shot `didSeedMagHeading` instead of `drTrack.count <= 1`
+
 ## Open follow-ups
 
 - Device manual checklist after paid team or free device slot
-- Commit-after-review → PR → `/pr-review`
+- Re-run `/pr-review` after push of review fixes
