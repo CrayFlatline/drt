@@ -103,7 +103,7 @@ graph TD
 - **Опис:** Max-rate Core Motion (attitude, user accel, gyro, heading з soft-gate на mag) + окремий потік CLLocation для GPS.
 - **Залежності:** `feature-project-infrastructure`
 - **Пріоритет:** High
-- **Статус:** Planned
+- **Статус:** Merged (PR #2) — manual verify on Xcode machine
 - **Ключове:** цільова частота (spike 50–100 Hz); background constraints задокументовані; GPS ніколи не змішується з IMU в одному «зліпленому» семплі без міток джерела.
 
 ### ID: `feature-log-store`
