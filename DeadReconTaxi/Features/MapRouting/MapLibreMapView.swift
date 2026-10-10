@@ -18,6 +18,12 @@ struct MapLibreMapView: UIViewRepresentable {
     var pointB: CLLocationCoordinate2D?
     /// Route polyline vertices.
     var routeCoordinates: [CLLocationCoordinate2D]
+    /// GPS log track for dual-track lab overlays.
+    var gpsTrack: [CLLocationCoordinate2D] = []
+    /// Dead-reckoning track for dual-track lab overlays.
+    var drTrack: [CLLocationCoordinate2D] = []
+    /// When false, map taps are ignored (fusion lab).
+    var tapsEnabled: Bool = true
     /// Called when the user taps the map.
     var onTap: (CLLocationCoordinate2D) -> Void
 
@@ -38,17 +44,21 @@ struct MapLibreMapView: UIViewRepresentable {
         )
         mapView.addGestureRecognizer(tap)
         context.coordinator.mapView = mapView
+        context.coordinator.tapsEnabled = tapsEnabled
         return mapView
     }
 
     /// Syncs pins and polyline when SwiftUI state changes.
     func updateUIView(_ mapView: MLNMapView, context: Context) {
         context.coordinator.onTap = onTap
+        context.coordinator.tapsEnabled = tapsEnabled
         context.coordinator.syncAnnotations(
             mapView: mapView,
             pointA: pointA,
             pointB: pointB,
-            routeCoordinates: routeCoordinates
+            routeCoordinates: routeCoordinates,
+            gpsTrack: gpsTrack,
+            drTrack: drTrack
         )
     }
 
@@ -56,6 +66,8 @@ struct MapLibreMapView: UIViewRepresentable {
     final class Coordinator: NSObject, MLNMapViewDelegate {
         /// Tap callback from the parent view.
         var onTap: (CLLocationCoordinate2D) -> Void
+        /// When false, ignore map taps.
+        var tapsEnabled = true
         /// Weak map reference for gesture conversion.
         weak var mapView: MLNMapView?
         /// Last fitted route vertex count. Prevents repeated camera jumps.
@@ -70,7 +82,7 @@ struct MapLibreMapView: UIViewRepresentable {
 
         /// Converts a view tap into a map coordinate and forwards it.
         @objc func handleTap(_ gesture: UITapGestureRecognizer) {
-            guard let mapView else { return }
+            guard tapsEnabled, let mapView else { return }
             let point = gesture.location(in: mapView)
             let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
             onTap(coordinate)
@@ -83,11 +95,15 @@ struct MapLibreMapView: UIViewRepresentable {
         ///   - pointA: Optional start pin.
         ///   - pointB: Optional end pin.
         ///   - routeCoordinates: Polyline vertices. Needs at least two points.
+        ///   - gpsTrack: Optional GPS trail.
+        ///   - drTrack: Optional dead-reckoning trail.
         func syncAnnotations(
             mapView: MLNMapView,
             pointA: CLLocationCoordinate2D?,
             pointB: CLLocationCoordinate2D?,
-            routeCoordinates: [CLLocationCoordinate2D]
+            routeCoordinates: [CLLocationCoordinate2D],
+            gpsTrack: [CLLocationCoordinate2D],
+            drTrack: [CLLocationCoordinate2D]
         ) {
             if let existing = mapView.annotations {
                 mapView.removeAnnotations(existing)
@@ -106,18 +122,19 @@ struct MapLibreMapView: UIViewRepresentable {
                 mapView.addAnnotation(b)
             }
 
+            addPolyline(mapView: mapView, coordinates: routeCoordinates, title: "route")
+            addPolyline(mapView: mapView, coordinates: gpsTrack, title: "gps")
+            addPolyline(mapView: mapView, coordinates: drTrack, title: "dr")
+
             guard routeCoordinates.count >= 2 else {
                 lastRouteCount = 0
                 return
             }
 
-            var coords = routeCoordinates
-            let line = MLNPolyline(coordinates: &coords, count: UInt(coords.count))
-            mapView.addAnnotation(line)
-
             // Fit camera only when the route geometry changes.
             if routeCoordinates.count != lastRouteCount {
                 lastRouteCount = routeCoordinates.count
+                var coords = routeCoordinates
                 mapView.setVisibleCoordinates(
                     &coords,
                     count: UInt(coords.count),
@@ -127,19 +144,44 @@ struct MapLibreMapView: UIViewRepresentable {
             }
         }
 
+        /// Adds a titled polyline when it has at least two points.
+        private func addPolyline(
+            mapView: MLNMapView,
+            coordinates: [CLLocationCoordinate2D],
+            title: String
+        ) {
+            guard coordinates.count >= 2 else { return }
+            var coords = coordinates
+            let line = MLNPolyline(coordinates: &coords, count: UInt(coords.count))
+            line.title = title
+            mapView.addAnnotation(line)
+        }
+
         /// Allows callouts on point pins only.
         func mapView(_ mapView: MLNMapView, annotationCanShowCallout annotation: MLNAnnotation) -> Bool {
             !(annotation is MLNPolyline)
         }
 
-        /// Sets the route line color.
+        /// Sets line color by track title.
         func mapView(_ mapView: MLNMapView, strokeColorForShapeAnnotation annotation: MLNShape) -> UIColor {
-            .systemBlue
+            switch annotation.title ?? "" {
+            case "gps":
+                return .systemGreen
+            case "dr":
+                return .systemOrange
+            default:
+                return .systemBlue
+            }
         }
 
         /// Sets the route line width in points.
         func mapView(_ mapView: MLNMapView, lineWidthForPolylineAnnotation annotation: MLNPolyline) -> CGFloat {
-            4
+            switch annotation.title ?? "" {
+            case "gps", "dr":
+                return 3
+            default:
+                return 4
+            }
         }
     }
 }

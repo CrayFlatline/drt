@@ -136,6 +136,16 @@ final class LogStore: ObservableObject {
         }
     }
 
+    /// Appends a pre-encoded JSON object line while recording.
+    ///
+    /// Used by fusion for `dr_state` / `zupt` / `snap`. No-op when not recording.
+    ///
+    /// - Parameter line: JSON object without a trailing newline.
+    func appendEncodedLine(_ line: String) {
+        guard isRecording else { return }
+        appendLine(line)
+    }
+
     /// Lists session files newest first.
     ///
     /// - Returns: URLs of `.jsonl` files under `logsDirectory`.

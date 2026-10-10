@@ -119,7 +119,7 @@ graph TD
 - **Опис:** Route-constrained EKF (стан уздовж маршруту: progress `s`, `v`, ψ / bias); snap; GPS update з gate; режим GPS-denied.
 - **Залежності:** `feature-map-routing`, `feature-log-store`
 - **Пріоритет:** High
-- **Статус:** Planned
+- **Статус:** In progress (`feature-fusion-ekf`) — impl + simulator unit tests green; device manual deferred (Personal Team limit / path C)
 - **Ключове:** чистий Swift API `predict` / `update_*`; mag soft-reject у авто; ZUPT на зупинках (підготовка під світлофори).
 
 ### ID: `feature-landmarks-osm`
