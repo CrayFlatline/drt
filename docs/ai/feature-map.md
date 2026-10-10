@@ -111,7 +111,7 @@ graph TD
 - **Опис:** Запис сесії: IMU, GPS (окремо), події (prompt/landmark), маршрут id/полілінія; експорт для replay.
 - **Залежності:** `feature-sensor-hub`
 - **Пріоритет:** High
-- **Статус:** Planned
+- **Статус:** Merged (PR #3 / `16788f1`) — GPS-gated JSONL; manual verify on Xcode machine
 - **Ключове:** dual-track ready schema (`gps_*` vs `dr_*` / events); детермінований replay input.
 
 ### ID: `feature-fusion-ekf`
