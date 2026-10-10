@@ -3,6 +3,7 @@ import SwiftUI
 
 /// Lab screen: pick A/B on the map and build an OSRM driving route.
 struct MapRoutingView: View {
+    @EnvironmentObject private var appSession: AppSession
     @State private var pointA: CLLocationCoordinate2D?
     @State private var pointB: CLLocationCoordinate2D?
     @State private var route: Route?
@@ -127,6 +128,7 @@ struct MapRoutingView: View {
         pointA = nil
         pointB = nil
         route = nil
+        appSession.lastRoute = nil
         isLoading = false
     }
 
@@ -148,6 +150,7 @@ struct MapRoutingView: View {
             // Ignore stale responses after Clear or a newer Build.
             guard generation == requestGeneration else { return }
             route = built
+            appSession.lastRoute = built
         } catch {
             guard generation == requestGeneration else { return }
             route = nil
@@ -159,5 +162,6 @@ struct MapRoutingView: View {
 #Preview {
     NavigationStack {
         MapRoutingView()
+            .environmentObject(AppSession())
     }
 }

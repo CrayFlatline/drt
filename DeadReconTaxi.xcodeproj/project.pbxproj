@@ -7,33 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A52A9E4F95F4178846ECBDD /* SensorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3297CB146C244F1B95250E5C /* SensorSamples.swift */; };
-		86FB700586BE46E0B1AB530D /* MagTrust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83409BB500EC43C08ADE9015 /* MagTrust.swift */; };
 		013ABD5508574B4AA311C31D /* SensorHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03021DC259412B83502B95 /* SensorHub.swift */; };
-		CE8F9AA38473417A83696528 /* SensorLabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049AC2494B44A8DBD00A2DA /* SensorLabView.swift */; };
+		1312B385A49D4B4A841AC569 /* RouteModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F7D2160C54CAB8C331DAB /* RouteModels.swift */; };
+		27988F80D28343E39F25BD17 /* SigningNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D13D9049046DB9A99E9B5 /* SigningNotesView.swift */; };
+		2AD061BA24F64ED5B459D1DF /* DeadReconTaxiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B1988ECD94AFFA963AF0F /* DeadReconTaxiApp.swift */; };
+		2BA2783C617243B094DE793D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84589D4086C445DEBFE08CCA /* RootView.swift */; };
+		2FD087CB5FF74DBE954D92E7 /* PolylineDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4779373DBE79435996168BB3 /* PolylineDecoderTests.swift */; };
+		33AA7C02CAC24A0C9FBB7772 /* MapRoutingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E4413C6FB4395AFE9A3CC /* MapRoutingConfig.swift */; };
+		3A52A9E4F95F4178846ECBDD /* SensorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3297CB146C244F1B95250E5C /* SensorSamples.swift */; };
+		3C7932DF3FFD44C0A25AEE3B /* osrm_kyiv_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = E38A44EA37144E8CAE8FCC67 /* osrm_kyiv_sample.json */; };
+		5B44C77B21934B5E993A8744 /* PolylineDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470BC26454D4007BE219AE6 /* PolylineDecoder.swift */; };
+		61AD0E598D474325BB2081EC /* OSRMResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9647E0C58A504217BA08C15A /* OSRMResponseParser.swift */; };
 		82ABDDF7509C4294863ADC2E /* MagTrustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF138D6DD24816AD034DB2 /* MagTrustTests.swift */; };
+		831C07EAAFDF42AD8B9A1779 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E455A94F314C748711295C /* HomeView.swift */; };
+		848B97EEEAFC4FE39E796B67 /* LabPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D7E9972B14410B16A9435 /* LabPlaceholderView.swift */; };
+		86FB700586BE46E0B1AB530D /* MagTrust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83409BB500EC43C08ADE9015 /* MagTrust.swift */; };
 		B11B2C3D4E5F60718293A4B5 /* LogEventEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11B2C3D4E5F60718293A4B5 /* LogEventEncoder.swift */; };
 		B22B2C3D4E5F60718293A4B5 /* LogSessionPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22B2C3D4E5F60718293A4B5 /* LogSessionPolicy.swift */; };
 		B33B2C3D4E5F60718293A4B5 /* LogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B2C3D4E5F60718293A4B5 /* LogStore.swift */; };
 		B44B2C3D4E5F60718293A4B5 /* LogLabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B2C3D4E5F60718293A4B5 /* LogLabView.swift */; };
 		B55B2C3D4E5F60718293A4B5 /* LogEventEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55B2C3D4E5F60718293A4B5 /* LogEventEncoderTests.swift */; };
-		2AD061BA24F64ED5B459D1DF /* DeadReconTaxiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B1988ECD94AFFA963AF0F /* DeadReconTaxiApp.swift */; };
-		2BA2783C617243B094DE793D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84589D4086C445DEBFE08CCA /* RootView.swift */; };
-		831C07EAAFDF42AD8B9A1779 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E455A94F314C748711295C /* HomeView.swift */; };
-		27988F80D28343E39F25BD17 /* SigningNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D13D9049046DB9A99E9B5 /* SigningNotesView.swift */; };
-		848B97EEEAFC4FE39E796B67 /* LabPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D7E9972B14410B16A9435 /* LabPlaceholderView.swift */; };
-		33AA7C02CAC24A0C9FBB7772 /* MapRoutingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E4413C6FB4395AFE9A3CC /* MapRoutingConfig.swift */; };
-		1312B385A49D4B4A841AC569 /* RouteModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F7D2160C54CAB8C331DAB /* RouteModels.swift */; };
-		5B44C77B21934B5E993A8744 /* PolylineDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470BC26454D4007BE219AE6 /* PolylineDecoder.swift */; };
-		61AD0E598D474325BB2081EC /* OSRMResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9647E0C58A504217BA08C15A /* OSRMResponseParser.swift */; };
-		C7798E3577B549CE87A671D3 /* RoutingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DE37AC034B49AD98AF600F /* RoutingClient.swift */; };
 		C2A385986A384AB488EF08CE /* MapLibreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA340ABCB4AD47BEB7613E6C /* MapLibreMapView.swift */; };
+		C7798E3577B549CE87A671D3 /* RoutingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DE37AC034B49AD98AF600F /* RoutingClient.swift */; };
 		C7A1E612FF2E4FB0A6FFEA24 /* MapRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA69151DB974FF089E32BD7 /* MapRoutingView.swift */; };
+		CE8F9AA38473417A83696528 /* SensorLabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049AC2494B44A8DBD00A2DA /* SensorLabView.swift */; };
 		E1988F60E6FC40F98C6D013C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C721DDAA4774C029B5F9AC5 /* Assets.xcassets */; };
-		F32F483B5966412C958C042D /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = F5C0696E25EB4BBB9A569417 /* MapLibre */; };
-		2FD087CB5FF74DBE954D92E7 /* PolylineDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4779373DBE79435996168BB3 /* PolylineDecoderTests.swift */; };
 		E4DA7C0BA5F24799A594B5BF /* OSRMResponseParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97524D8CACE141B99E41601F /* OSRMResponseParserTests.swift */; };
-		3C7932DF3FFD44C0A25AEE3B /* osrm_kyiv_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = E38A44EA37144E8CAE8FCC67 /* osrm_kyiv_sample.json */; };
+		F01C2C3D4E5F60718293A4B5 /* FusionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01B2C3D4E5F60718293A4B5 /* FusionConfig.swift */; };
+		F02C2C3D4E5F60718293A4B5 /* RouteGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B2C3D4E5F60718293A4B5 /* RouteGeometry.swift */; };
+		F03C2C3D4E5F60718293A4B5 /* FusionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B2C3D4E5F60718293A4B5 /* FusionProtocols.swift */; };
+		F04C2C3D4E5F60718293A4B5 /* SwiftAHRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B2C3D4E5F60718293A4B5 /* SwiftAHRS.swift */; };
+		F05C2C3D4E5F60718293A4B5 /* SwiftINS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05B2C3D4E5F60718293A4B5 /* SwiftINS.swift */; };
+		F06C2C3D4E5F60718293A4B5 /* SwiftNavFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B2C3D4E5F60718293A4B5 /* SwiftNavFilter.swift */; };
+		F07C2C3D4E5F60718293A4B5 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B2C3D4E5F60718293A4B5 /* AppSession.swift */; };
+		F08C2C3D4E5F60718293A4B5 /* FusionSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08B2C3D4E5F60718293A4B5 /* FusionSession.swift */; };
+		F09C2C3D4E5F60718293A4B5 /* FusionLabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B2C3D4E5F60718293A4B5 /* FusionLabView.swift */; };
+		F10C2C3D4E5F60718293A4B5 /* RouteGeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B2C3D4E5F60718293A4B5 /* RouteGeometryTests.swift */; };
+		F11C2C3D4E5F60718293A4B5 /* FusionNavTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B2C3D4E5F60718293A4B5 /* FusionNavTests.swift */; };
+		F32F483B5966412C958C042D /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = F5C0696E25EB4BBB9A569417 /* MapLibre */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,145 +58,370 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C721DDAA4774C029B5F9AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F2095AB5DF441C9B59A94CD /* DeadReconTaxiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeadReconTaxiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2470BC26454D4007BE219AE6 /* PolylineDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineDecoder.swift; sourceTree = "<group>"; };
 		3297CB146C244F1B95250E5C /* SensorSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorSamples.swift; sourceTree = "<group>"; };
-		83409BB500EC43C08ADE9015 /* MagTrust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagTrust.swift; sourceTree = "<group>"; };
 		3D03021DC259412B83502B95 /* SensorHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorHub.swift; sourceTree = "<group>"; };
-		D049AC2494B44A8DBD00A2DA /* SensorLabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorLabView.swift; sourceTree = "<group>"; };
+		4779373DBE79435996168BB3 /* PolylineDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineDecoderTests.swift; sourceTree = "<group>"; };
+		532F7D2160C54CAB8C331DAB /* RouteModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModels.swift; sourceTree = "<group>"; };
+		618D13D9049046DB9A99E9B5 /* SigningNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningNotesView.swift; sourceTree = "<group>"; };
+		6EA69151DB974FF089E32BD7 /* MapRoutingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRoutingView.swift; sourceTree = "<group>"; };
 		7BFF138D6DD24816AD034DB2 /* MagTrustTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagTrustTests.swift; sourceTree = "<group>"; };
+		83409BB500EC43C08ADE9015 /* MagTrust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagTrust.swift; sourceTree = "<group>"; };
+		84589D4086C445DEBFE08CCA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		929D7E9972B14410B16A9435 /* LabPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabPlaceholderView.swift; sourceTree = "<group>"; };
+		9647E0C58A504217BA08C15A /* OSRMResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSRMResponseParser.swift; sourceTree = "<group>"; };
+		97524D8CACE141B99E41601F /* OSRMResponseParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSRMResponseParserTests.swift; sourceTree = "<group>"; };
 		A11B2C3D4E5F60718293A4B5 /* LogEventEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEventEncoder.swift; sourceTree = "<group>"; };
+		A1E455A94F314C748711295C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A22B2C3D4E5F60718293A4B5 /* LogSessionPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSessionPolicy.swift; sourceTree = "<group>"; };
 		A33B2C3D4E5F60718293A4B5 /* LogStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogStore.swift; sourceTree = "<group>"; };
+		A3DE37AC034B49AD98AF600F /* RoutingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingClient.swift; sourceTree = "<group>"; };
 		A44B2C3D4E5F60718293A4B5 /* LogLabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLabView.swift; sourceTree = "<group>"; };
 		A55B2C3D4E5F60718293A4B5 /* LogEventEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEventEncoderTests.swift; sourceTree = "<group>"; };
-		DA867565B59F459586987C2B /* DeadReconTaxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeadReconTaxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F2095AB5DF441C9B59A94CD /* DeadReconTaxiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeadReconTaxiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F27B1988ECD94AFFA963AF0F /* DeadReconTaxiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadReconTaxiApp.swift; sourceTree = "<group>"; };
-		84589D4086C445DEBFE08CCA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		A1E455A94F314C748711295C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		618D13D9049046DB9A99E9B5 /* SigningNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningNotesView.swift; sourceTree = "<group>"; };
-		929D7E9972B14410B16A9435 /* LabPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabPlaceholderView.swift; sourceTree = "<group>"; };
 		BF7E4413C6FB4395AFE9A3CC /* MapRoutingConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRoutingConfig.swift; sourceTree = "<group>"; };
-		532F7D2160C54CAB8C331DAB /* RouteModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModels.swift; sourceTree = "<group>"; };
-		2470BC26454D4007BE219AE6 /* PolylineDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineDecoder.swift; sourceTree = "<group>"; };
-		9647E0C58A504217BA08C15A /* OSRMResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSRMResponseParser.swift; sourceTree = "<group>"; };
-		A3DE37AC034B49AD98AF600F /* RoutingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingClient.swift; sourceTree = "<group>"; };
-		FA340ABCB4AD47BEB7613E6C /* MapLibreMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLibreMapView.swift; sourceTree = "<group>"; };
-		6EA69151DB974FF089E32BD7 /* MapRoutingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRoutingView.swift; sourceTree = "<group>"; };
-		0C721DDAA4774C029B5F9AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4779373DBE79435996168BB3 /* PolylineDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineDecoderTests.swift; sourceTree = "<group>"; };
-		97524D8CACE141B99E41601F /* OSRMResponseParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSRMResponseParserTests.swift; sourceTree = "<group>"; };
+		D049AC2494B44A8DBD00A2DA /* SensorLabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorLabView.swift; sourceTree = "<group>"; };
+		DA867565B59F459586987C2B /* DeadReconTaxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeadReconTaxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38A44EA37144E8CAE8FCC67 /* osrm_kyiv_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = osrm_kyiv_sample.json; sourceTree = "<group>"; };
+		F01B2C3D4E5F60718293A4B5 /* FusionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionConfig.swift; sourceTree = "<group>"; };
+		F02B2C3D4E5F60718293A4B5 /* RouteGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteGeometry.swift; sourceTree = "<group>"; };
+		F03B2C3D4E5F60718293A4B5 /* FusionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionProtocols.swift; sourceTree = "<group>"; };
+		F04B2C3D4E5F60718293A4B5 /* SwiftAHRS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAHRS.swift; sourceTree = "<group>"; };
+		F05B2C3D4E5F60718293A4B5 /* SwiftINS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftINS.swift; sourceTree = "<group>"; };
+		F06B2C3D4E5F60718293A4B5 /* SwiftNavFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNavFilter.swift; sourceTree = "<group>"; };
+		F07B2C3D4E5F60718293A4B5 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		F08B2C3D4E5F60718293A4B5 /* FusionSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionSession.swift; sourceTree = "<group>"; };
+		F09B2C3D4E5F60718293A4B5 /* FusionLabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionLabView.swift; sourceTree = "<group>"; };
+		F10B2C3D4E5F60718293A4B5 /* RouteGeometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteGeometryTests.swift; sourceTree = "<group>"; };
+		F11B2C3D4E5F60718293A4B5 /* FusionNavTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionNavTests.swift; sourceTree = "<group>"; };
+		F27B1988ECD94AFFA963AF0F /* DeadReconTaxiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadReconTaxiApp.swift; sourceTree = "<group>"; };
+		FA340ABCB4AD47BEB7613E6C /* MapLibreMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLibreMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4BC6603FB8474F639EB5D687 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (F32F483B5966412C958C042D /* MapLibre in Frameworks */,); runOnlyForDeploymentPostprocessing = 0; };
-		6255D833EED14490A46CB4A7 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		4BC6603FB8474F639EB5D687 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F32F483B5966412C958C042D /* MapLibre in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6255D833EED14490A46CB4A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB1F418A8C764BFDA22C99FC = {isa = PBXGroup; children = (F3C8A8405B0C4D64AD79ACD6 /* DeadReconTaxi */, EED652476EAC4BADA179D6F8 /* DeadReconTaxiTests */, 71F6470E785942748B30E72B /* Products */,); sourceTree = "<group>"; };
-		71F6470E785942748B30E72B /* Products */ = {isa = PBXGroup; children = (DA867565B59F459586987C2B /* DeadReconTaxi.app */, 1F2095AB5DF441C9B59A94CD /* DeadReconTaxiTests.xctest */,); name = Products; sourceTree = "<group>"; };
-		F3C8A8405B0C4D64AD79ACD6 /* DeadReconTaxi */ = {isa = PBXGroup; children = (189D7FCD737941EB919AA346 /* App */, 95C79ADD9C9F45E3A6C11B58 /* Features */, 0C721DDAA4774C029B5F9AC5 /* Assets.xcassets */,); path = DeadReconTaxi; sourceTree = "<group>"; };
-		189D7FCD737941EB919AA346 /* App */ = {isa = PBXGroup; children = (F27B1988ECD94AFFA963AF0F /* DeadReconTaxiApp.swift */,); path = App; sourceTree = "<group>"; };
-		95C79ADD9C9F45E3A6C11B58 /* Features */ = {isa = PBXGroup; children = (561C2F7C7DE74215937CBF2A /* Home */, AFD0B7F00ABE419E8AF09EFA /* Lab */, CCFA9013665B41C1B904B245 /* MapRouting */, 2DE9ADAA4686441C9798FFCB /* SensorHub */, C11B2C3D4E5F60718293A4B5 /* LogStore */); path = Features; sourceTree = "<group>"; };
-		C11B2C3D4E5F60718293A4B5 /* LogStore */ = {isa = PBXGroup; children = (A11B2C3D4E5F60718293A4B5 /* LogEventEncoder.swift */, A22B2C3D4E5F60718293A4B5 /* LogSessionPolicy.swift */, A33B2C3D4E5F60718293A4B5 /* LogStore.swift */, A44B2C3D4E5F60718293A4B5 /* LogLabView.swift */); path = LogStore; sourceTree = "<group>"; };
-		561C2F7C7DE74215937CBF2A /* Home */ = {isa = PBXGroup; children = (84589D4086C445DEBFE08CCA /* RootView.swift */, A1E455A94F314C748711295C /* HomeView.swift */, 618D13D9049046DB9A99E9B5 /* SigningNotesView.swift */,); path = Home; sourceTree = "<group>"; };
-		AFD0B7F00ABE419E8AF09EFA /* Lab */ = {isa = PBXGroup; children = (929D7E9972B14410B16A9435 /* LabPlaceholderView.swift */,); path = Lab; sourceTree = "<group>"; };
-		CCFA9013665B41C1B904B245 /* MapRouting */ = {isa = PBXGroup; children = (BF7E4413C6FB4395AFE9A3CC /* MapRoutingConfig.swift */, 532F7D2160C54CAB8C331DAB /* RouteModels.swift */, 2470BC26454D4007BE219AE6 /* PolylineDecoder.swift */, 9647E0C58A504217BA08C15A /* OSRMResponseParser.swift */, A3DE37AC034B49AD98AF600F /* RoutingClient.swift */, FA340ABCB4AD47BEB7613E6C /* MapLibreMapView.swift */, 6EA69151DB974FF089E32BD7 /* MapRoutingView.swift */,); path = MapRouting; sourceTree = "<group>"; };
-		EED652476EAC4BADA179D6F8 /* DeadReconTaxiTests */ = {isa = PBXGroup; children = (4779373DBE79435996168BB3 /* PolylineDecoderTests.swift */, 97524D8CACE141B99E41601F /* OSRMResponseParserTests.swift */, F68EAC5356D54204AE4F1918 /* Fixtures */, 7BFF138D6DD24816AD034DB2 /* MagTrustTests.swift */, A55B2C3D4E5F60718293A4B5 /* LogEventEncoderTests.swift */); path = DeadReconTaxiTests; sourceTree = "<group>"; };
-		F68EAC5356D54204AE4F1918 /* Fixtures */ = {isa = PBXGroup; children = (E38A44EA37144E8CAE8FCC67 /* osrm_kyiv_sample.json */,); path = Fixtures; sourceTree = "<group>"; };
-		2DE9ADAA4686441C9798FFCB /* SensorHub */ = {isa = PBXGroup; children = (3297CB146C244F1B95250E5C /* SensorSamples.swift */, 83409BB500EC43C08ADE9015 /* MagTrust.swift */, 3D03021DC259412B83502B95 /* SensorHub.swift */, D049AC2494B44A8DBD00A2DA /* SensorLabView.swift */,); path = SensorHub; sourceTree = "<group>"; };
+		189D7FCD737941EB919AA346 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F27B1988ECD94AFFA963AF0F /* DeadReconTaxiApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2DE9ADAA4686441C9798FFCB /* SensorHub */ = {
+			isa = PBXGroup;
+			children = (
+				3297CB146C244F1B95250E5C /* SensorSamples.swift */,
+				83409BB500EC43C08ADE9015 /* MagTrust.swift */,
+				3D03021DC259412B83502B95 /* SensorHub.swift */,
+				D049AC2494B44A8DBD00A2DA /* SensorLabView.swift */,
+			);
+			path = SensorHub;
+			sourceTree = "<group>";
+		};
+		561C2F7C7DE74215937CBF2A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84589D4086C445DEBFE08CCA /* RootView.swift */,
+				A1E455A94F314C748711295C /* HomeView.swift */,
+				618D13D9049046DB9A99E9B5 /* SigningNotesView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		71F6470E785942748B30E72B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA867565B59F459586987C2B /* DeadReconTaxi.app */,
+				1F2095AB5DF441C9B59A94CD /* DeadReconTaxiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95C79ADD9C9F45E3A6C11B58 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				561C2F7C7DE74215937CBF2A /* Home */,
+				AFD0B7F00ABE419E8AF09EFA /* Lab */,
+				CCFA9013665B41C1B904B245 /* MapRouting */,
+				2DE9ADAA4686441C9798FFCB /* SensorHub */,
+				C11B2C3D4E5F60718293A4B5 /* LogStore */,
+				F00B2C3D4E5F60718293A4B5 /* Fusion */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AB1F418A8C764BFDA22C99FC = {
+			isa = PBXGroup;
+			children = (
+				F3C8A8405B0C4D64AD79ACD6 /* DeadReconTaxi */,
+				EED652476EAC4BADA179D6F8 /* DeadReconTaxiTests */,
+				71F6470E785942748B30E72B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFD0B7F00ABE419E8AF09EFA /* Lab */ = {
+			isa = PBXGroup;
+			children = (
+				929D7E9972B14410B16A9435 /* LabPlaceholderView.swift */,
+			);
+			path = Lab;
+			sourceTree = "<group>";
+		};
+		C11B2C3D4E5F60718293A4B5 /* LogStore */ = {
+			isa = PBXGroup;
+			children = (
+				A11B2C3D4E5F60718293A4B5 /* LogEventEncoder.swift */,
+				A22B2C3D4E5F60718293A4B5 /* LogSessionPolicy.swift */,
+				A33B2C3D4E5F60718293A4B5 /* LogStore.swift */,
+				A44B2C3D4E5F60718293A4B5 /* LogLabView.swift */,
+			);
+			path = LogStore;
+			sourceTree = "<group>";
+		};
+		CCFA9013665B41C1B904B245 /* MapRouting */ = {
+			isa = PBXGroup;
+			children = (
+				BF7E4413C6FB4395AFE9A3CC /* MapRoutingConfig.swift */,
+				532F7D2160C54CAB8C331DAB /* RouteModels.swift */,
+				2470BC26454D4007BE219AE6 /* PolylineDecoder.swift */,
+				9647E0C58A504217BA08C15A /* OSRMResponseParser.swift */,
+				A3DE37AC034B49AD98AF600F /* RoutingClient.swift */,
+				FA340ABCB4AD47BEB7613E6C /* MapLibreMapView.swift */,
+				6EA69151DB974FF089E32BD7 /* MapRoutingView.swift */,
+			);
+			path = MapRouting;
+			sourceTree = "<group>";
+		};
+		EED652476EAC4BADA179D6F8 /* DeadReconTaxiTests */ = {
+			isa = PBXGroup;
+			children = (
+				4779373DBE79435996168BB3 /* PolylineDecoderTests.swift */,
+				97524D8CACE141B99E41601F /* OSRMResponseParserTests.swift */,
+				F68EAC5356D54204AE4F1918 /* Fixtures */,
+				7BFF138D6DD24816AD034DB2 /* MagTrustTests.swift */,
+				A55B2C3D4E5F60718293A4B5 /* LogEventEncoderTests.swift */,
+				F10B2C3D4E5F60718293A4B5 /* RouteGeometryTests.swift */,
+				F11B2C3D4E5F60718293A4B5 /* FusionNavTests.swift */,
+			);
+			path = DeadReconTaxiTests;
+			sourceTree = "<group>";
+		};
+		F00B2C3D4E5F60718293A4B5 /* Fusion */ = {
+			isa = PBXGroup;
+			children = (
+				F01B2C3D4E5F60718293A4B5 /* FusionConfig.swift */,
+				F02B2C3D4E5F60718293A4B5 /* RouteGeometry.swift */,
+				F03B2C3D4E5F60718293A4B5 /* FusionProtocols.swift */,
+				F04B2C3D4E5F60718293A4B5 /* SwiftAHRS.swift */,
+				F05B2C3D4E5F60718293A4B5 /* SwiftINS.swift */,
+				F06B2C3D4E5F60718293A4B5 /* SwiftNavFilter.swift */,
+				F07B2C3D4E5F60718293A4B5 /* AppSession.swift */,
+				F08B2C3D4E5F60718293A4B5 /* FusionSession.swift */,
+				F09B2C3D4E5F60718293A4B5 /* FusionLabView.swift */,
+			);
+			path = Fusion;
+			sourceTree = "<group>";
+		};
+		F3C8A8405B0C4D64AD79ACD6 /* DeadReconTaxi */ = {
+			isa = PBXGroup;
+			children = (
+				189D7FCD737941EB919AA346 /* App */,
+				95C79ADD9C9F45E3A6C11B58 /* Features */,
+				0C721DDAA4774C029B5F9AC5 /* Assets.xcassets */,
+			);
+			path = DeadReconTaxi;
+			sourceTree = "<group>";
+		};
+		F68EAC5356D54204AE4F1918 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				E38A44EA37144E8CAE8FCC67 /* osrm_kyiv_sample.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		611E5573E3694FB6BCC91A15 /* DeadReconTaxi */ = {isa = PBXNativeTarget; buildConfigurationList = 6CF9B5C81B924CBE8C8314D6 /* Build configuration list for PBXNativeTarget "DeadReconTaxi" */; buildPhases = (8F2CF9D3D1B349E0AC9C33FF /* Sources */, 4BC6603FB8474F639EB5D687 /* Frameworks */, 9F830D03E50942D3BA5C22A9 /* Resources */,); buildRules = (); dependencies = (); name = DeadReconTaxi; packageProductDependencies = (F5C0696E25EB4BBB9A569417 /* MapLibre */,); productName = DeadReconTaxi; productReference = DA867565B59F459586987C2B /* DeadReconTaxi.app */; productType = "com.apple.product-type.application"; };
-		4D83FB866CD24F80B1AF38BD /* DeadReconTaxiTests */ = {isa = PBXNativeTarget; buildConfigurationList = 4E9D5989FCBE414B9BC0664F /* Build configuration list for PBXNativeTarget "DeadReconTaxiTests" */; buildPhases = (9BA1E4296ADD4D838020A400 /* Sources */, 6255D833EED14490A46CB4A7 /* Frameworks */, 3823215D48C64923866BC989 /* Resources */,); buildRules = (); dependencies = (6C8B04BB5A4143E68F93A398 /* PBXTargetDependency */,); name = DeadReconTaxiTests; productName = DeadReconTaxiTests; productReference = 1F2095AB5DF441C9B59A94CD /* DeadReconTaxiTests.xctest */; productType = "com.apple.product-type.bundle.unit-test"; };
+		4D83FB866CD24F80B1AF38BD /* DeadReconTaxiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E9D5989FCBE414B9BC0664F /* Build configuration list for PBXNativeTarget "DeadReconTaxiTests" */;
+			buildPhases = (
+				9BA1E4296ADD4D838020A400 /* Sources */,
+				6255D833EED14490A46CB4A7 /* Frameworks */,
+				3823215D48C64923866BC989 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C8B04BB5A4143E68F93A398 /* PBXTargetDependency */,
+			);
+			name = DeadReconTaxiTests;
+			productName = DeadReconTaxiTests;
+			productReference = 1F2095AB5DF441C9B59A94CD /* DeadReconTaxiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		611E5573E3694FB6BCC91A15 /* DeadReconTaxi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CF9B5C81B924CBE8C8314D6 /* Build configuration list for PBXNativeTarget "DeadReconTaxi" */;
+			buildPhases = (
+				8F2CF9D3D1B349E0AC9C33FF /* Sources */,
+				4BC6603FB8474F639EB5D687 /* Frameworks */,
+				9F830D03E50942D3BA5C22A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeadReconTaxi;
+			packageProductDependencies = (
+				F5C0696E25EB4BBB9A569417 /* MapLibre */,
+			);
+			productName = DeadReconTaxi;
+			productReference = DA867565B59F459586987C2B /* DeadReconTaxi.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6699E4817E574112BFDFF973 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; TargetAttributes = {611E5573E3694FB6BCC91A15 = {CreatedOnToolsVersion = 16.0;}; 4D83FB866CD24F80B1AF38BD = {CreatedOnToolsVersion = 16.0; TestTargetID = 611E5573E3694FB6BCC91A15;};}; buildConfigurationList = E857E29A74C9404BA9ED8E39 /* Build configuration list for PBXProject "DeadReconTaxi" */; compatibilityVersion = "Xcode 15.0"; developmentRegion = uk; hasScannedForEncodings = 0; knownRegions = (en, Base, uk,); mainGroup = AB1F418A8C764BFDA22C99FC; packageReferences = (37A04B836DC6479CAC9DFA2B /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,); productRefGroup = 71F6470E785942748B30E72B /* Products */; projectDirPath = ""; projectRoot = ""; targets = (611E5573E3694FB6BCC91A15 /* DeadReconTaxi */, 4D83FB866CD24F80B1AF38BD /* DeadReconTaxiTests */,); };
+		6699E4817E574112BFDFF973 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					4D83FB866CD24F80B1AF38BD = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 611E5573E3694FB6BCC91A15;
+					};
+					611E5573E3694FB6BCC91A15 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = E857E29A74C9404BA9ED8E39 /* Build configuration list for PBXProject "DeadReconTaxi" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = uk;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				uk,
+			);
+			mainGroup = AB1F418A8C764BFDA22C99FC;
+			packageReferences = (
+				37A04B836DC6479CAC9DFA2B /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+			);
+			productRefGroup = 71F6470E785942748B30E72B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				611E5573E3694FB6BCC91A15 /* DeadReconTaxi */,
+				4D83FB866CD24F80B1AF38BD /* DeadReconTaxiTests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9F830D03E50942D3BA5C22A9 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (E1988F60E6FC40F98C6D013C /* Assets.xcassets in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
-		3823215D48C64923866BC989 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (3C7932DF3FFD44C0A25AEE3B /* osrm_kyiv_sample.json in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
+		3823215D48C64923866BC989 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C7932DF3FFD44C0A25AEE3B /* osrm_kyiv_sample.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F830D03E50942D3BA5C22A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1988F60E6FC40F98C6D013C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8F2CF9D3D1B349E0AC9C33FF /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (2AD061BA24F64ED5B459D1DF /* DeadReconTaxiApp.swift in Sources */, 2BA2783C617243B094DE793D /* RootView.swift in Sources */, 831C07EAAFDF42AD8B9A1779 /* HomeView.swift in Sources */, 27988F80D28343E39F25BD17 /* SigningNotesView.swift in Sources */, 848B97EEEAFC4FE39E796B67 /* LabPlaceholderView.swift in Sources */, 33AA7C02CAC24A0C9FBB7772 /* MapRoutingConfig.swift in Sources */, 1312B385A49D4B4A841AC569 /* RouteModels.swift in Sources */, 5B44C77B21934B5E993A8744 /* PolylineDecoder.swift in Sources */, 61AD0E598D474325BB2081EC /* OSRMResponseParser.swift in Sources */, C7798E3577B549CE87A671D3 /* RoutingClient.swift in Sources */, C2A385986A384AB488EF08CE /* MapLibreMapView.swift in Sources */, C7A1E612FF2E4FB0A6FFEA24 /* MapRoutingView.swift in Sources */, 3A52A9E4F95F4178846ECBDD /* SensorSamples.swift in Sources */, 86FB700586BE46E0B1AB530D /* MagTrust.swift in Sources */, 013ABD5508574B4AA311C31D /* SensorHub.swift in Sources */, CE8F9AA38473417A83696528 /* SensorLabView.swift in Sources */, B11B2C3D4E5F60718293A4B5 /* LogEventEncoder.swift in Sources */, B22B2C3D4E5F60718293A4B5 /* LogSessionPolicy.swift in Sources */, B33B2C3D4E5F60718293A4B5 /* LogStore.swift in Sources */, B44B2C3D4E5F60718293A4B5 /* LogLabView.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
-		9BA1E4296ADD4D838020A400 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (2FD087CB5FF74DBE954D92E7 /* PolylineDecoderTests.swift in Sources */, E4DA7C0BA5F24799A594B5BF /* OSRMResponseParserTests.swift in Sources */, 82ABDDF7509C4294863ADC2E /* MagTrustTests.swift in Sources */, B55B2C3D4E5F60718293A4B5 /* LogEventEncoderTests.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+		8F2CF9D3D1B349E0AC9C33FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AD061BA24F64ED5B459D1DF /* DeadReconTaxiApp.swift in Sources */,
+				2BA2783C617243B094DE793D /* RootView.swift in Sources */,
+				831C07EAAFDF42AD8B9A1779 /* HomeView.swift in Sources */,
+				27988F80D28343E39F25BD17 /* SigningNotesView.swift in Sources */,
+				848B97EEEAFC4FE39E796B67 /* LabPlaceholderView.swift in Sources */,
+				33AA7C02CAC24A0C9FBB7772 /* MapRoutingConfig.swift in Sources */,
+				1312B385A49D4B4A841AC569 /* RouteModels.swift in Sources */,
+				5B44C77B21934B5E993A8744 /* PolylineDecoder.swift in Sources */,
+				61AD0E598D474325BB2081EC /* OSRMResponseParser.swift in Sources */,
+				C7798E3577B549CE87A671D3 /* RoutingClient.swift in Sources */,
+				C2A385986A384AB488EF08CE /* MapLibreMapView.swift in Sources */,
+				C7A1E612FF2E4FB0A6FFEA24 /* MapRoutingView.swift in Sources */,
+				3A52A9E4F95F4178846ECBDD /* SensorSamples.swift in Sources */,
+				86FB700586BE46E0B1AB530D /* MagTrust.swift in Sources */,
+				013ABD5508574B4AA311C31D /* SensorHub.swift in Sources */,
+				CE8F9AA38473417A83696528 /* SensorLabView.swift in Sources */,
+				B11B2C3D4E5F60718293A4B5 /* LogEventEncoder.swift in Sources */,
+				B22B2C3D4E5F60718293A4B5 /* LogSessionPolicy.swift in Sources */,
+				B33B2C3D4E5F60718293A4B5 /* LogStore.swift in Sources */,
+				B44B2C3D4E5F60718293A4B5 /* LogLabView.swift in Sources */,
+				F01C2C3D4E5F60718293A4B5 /* FusionConfig.swift in Sources */,
+				F02C2C3D4E5F60718293A4B5 /* RouteGeometry.swift in Sources */,
+				F03C2C3D4E5F60718293A4B5 /* FusionProtocols.swift in Sources */,
+				F04C2C3D4E5F60718293A4B5 /* SwiftAHRS.swift in Sources */,
+				F05C2C3D4E5F60718293A4B5 /* SwiftINS.swift in Sources */,
+				F06C2C3D4E5F60718293A4B5 /* SwiftNavFilter.swift in Sources */,
+				F07C2C3D4E5F60718293A4B5 /* AppSession.swift in Sources */,
+				F08C2C3D4E5F60718293A4B5 /* FusionSession.swift in Sources */,
+				F09C2C3D4E5F60718293A4B5 /* FusionLabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA1E4296ADD4D838020A400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FD087CB5FF74DBE954D92E7 /* PolylineDecoderTests.swift in Sources */,
+				E4DA7C0BA5F24799A594B5BF /* OSRMResponseParserTests.swift in Sources */,
+				82ABDDF7509C4294863ADC2E /* MagTrustTests.swift in Sources */,
+				B55B2C3D4E5F60718293A4B5 /* LogEventEncoderTests.swift in Sources */,
+				F10C2C3D4E5F60718293A4B5 /* RouteGeometryTests.swift in Sources */,
+				F11C2C3D4E5F60718293A4B5 /* FusionNavTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6C8B04BB5A4143E68F93A398 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 611E5573E3694FB6BCC91A15 /* DeadReconTaxi */; targetProxy = 11060E4D88B1436298F285C5 /* PBXContainerItemProxy */; };
+		6C8B04BB5A4143E68F93A398 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 611E5573E3694FB6BCC91A15 /* DeadReconTaxi */;
+			targetProxy = 11060E4D88B1436298F285C5 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		38DDA36FCB2A43A1B0EF6B45 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_TESTABILITY = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-			};
-			name = Debug;
-		};
-		480580F1EECB43DA82A0CA72 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-			};
-			name = Release;
-		};
-		E8BF88F8462D4CA79C8A5001 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = DeadReconTaxi;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "DeadReconTaxi використовує GPS (коли доступний) для порівняння з dead reckoning під час lab-заїздів.";
-				INFOPLIST_KEY_NSMotionUsageDescription = "DeadReconTaxi використовує акселерометр, гіроскоп і компас для інерційної навігації без стабільного GPS.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");
-				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ua.deadrecon.taxi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-			};
-			name = Debug;
-		};
 		0DC49F32F8C24DFCBAB7FD12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -202,7 +438,11 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ua.deadrecon.taxi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -211,7 +451,117 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2D03B5C54DBC409CA570190A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ua.deadrecon.taxi.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeadReconTaxi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DeadReconTaxi";
+			};
+			name = Release;
+		};
+		38DDA36FCB2A43A1B0EF6B45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		480580F1EECB43DA82A0CA72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -232,29 +582,68 @@
 			};
 			name = Debug;
 		};
-		2D03B5C54DBC409CA570190A /* Release */ = {
+		E8BF88F8462D4CA79C8A5001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DeadReconTaxi;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "DeadReconTaxi використовує GPS (коли доступний) для порівняння з dead reckoning під час lab-заїздів.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "DeadReconTaxi використовує акселерометр, гіроскоп і компас для інерційної навігації без стабільного GPS.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ua.deadrecon.taxi.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = ua.deadrecon.taxi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeadReconTaxi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DeadReconTaxi";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E857E29A74C9404BA9ED8E39 /* Build configuration list for PBXProject "DeadReconTaxi" */ = {isa = XCConfigurationList; buildConfigurations = (38DDA36FCB2A43A1B0EF6B45 /* Debug */, 480580F1EECB43DA82A0CA72 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-		6CF9B5C81B924CBE8C8314D6 /* Build configuration list for PBXNativeTarget "DeadReconTaxi" */ = {isa = XCConfigurationList; buildConfigurations = (E8BF88F8462D4CA79C8A5001 /* Debug */, 0DC49F32F8C24DFCBAB7FD12 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-		4E9D5989FCBE414B9BC0664F /* Build configuration list for PBXNativeTarget "DeadReconTaxiTests" */ = {isa = XCConfigurationList; buildConfigurations = (A7774BA00FAE48029609567B /* Debug */, 2D03B5C54DBC409CA570190A /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		4E9D5989FCBE414B9BC0664F /* Build configuration list for PBXNativeTarget "DeadReconTaxiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7774BA00FAE48029609567B /* Debug */,
+				2D03B5C54DBC409CA570190A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CF9B5C81B924CBE8C8314D6 /* Build configuration list for PBXNativeTarget "DeadReconTaxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8BF88F8462D4CA79C8A5001 /* Debug */,
+				0DC49F32F8C24DFCBAB7FD12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E857E29A74C9404BA9ED8E39 /* Build configuration list for PBXProject "DeadReconTaxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DDA36FCB2A43A1B0EF6B45 /* Debug */,
+				480580F1EECB43DA82A0CA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */

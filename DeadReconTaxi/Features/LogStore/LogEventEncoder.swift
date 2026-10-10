@@ -99,6 +99,68 @@ enum LogEventEncoder {
         ])
     }
 
+    /// Builds a throttled `dr_state` line from the navigator.
+    ///
+    /// - Parameters:
+    ///   - timestamp: State time.
+    ///   - sMeters: Arc length along the route.
+    ///   - speedMps: Speed in m/s.
+    ///   - headingRad: Heading in radians.
+    ///   - coordinate: Snapped WGS84 position.
+    ///   - sigma: Diagonal uncertainty.
+    /// - Returns: One JSON object as a string.
+    static func drStateLine(
+        timestamp: Date,
+        sMeters: Double,
+        speedMps: Double,
+        headingRad: Double,
+        coordinate: CLLocationCoordinate2D,
+        sigma: NavSigma
+    ) -> String {
+        jsonObject([
+            "type": "dr_state",
+            "ts": epochMs(timestamp),
+            "s": sMeters,
+            "v": speedMps,
+            "psi": headingRad,
+            "lat": coordinate.latitude,
+            "lon": coordinate.longitude,
+            "sigS": sigma.alongTrackMeters,
+            "sigV": sigma.speedMps,
+            "sigPsi": sigma.headingRad,
+        ])
+    }
+
+    /// Builds a `zupt` event line.
+    ///
+    /// - Parameters:
+    ///   - timestamp: Event time.
+    ///   - durationSec: Low-motion duration before the event.
+    /// - Returns: One JSON object as a string.
+    static func zuptLine(timestamp: Date, durationSec: Double) -> String {
+        jsonObject([
+            "type": "zupt",
+            "ts": epochMs(timestamp),
+            "durationSec": durationSec,
+        ])
+    }
+
+    /// Builds a `snap` residual event line.
+    ///
+    /// - Parameters:
+    ///   - timestamp: Event time.
+    ///   - residualMeters: Distance before snap.
+    ///   - sMeters: Arc length after snap.
+    /// - Returns: One JSON object as a string.
+    static func snapLine(timestamp: Date, residualMeters: Double, sMeters: Double) -> String {
+        jsonObject([
+            "type": "snap",
+            "ts": epochMs(timestamp),
+            "residualM": residualMeters,
+            "s": sMeters,
+        ])
+    }
+
     /// Converts a date to epoch milliseconds.
     static func epochMs(_ date: Date) -> Double {
         date.timeIntervalSince1970 * 1000

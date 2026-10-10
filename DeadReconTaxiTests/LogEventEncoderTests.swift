@@ -77,6 +77,36 @@ final class LogEventEncoderTests: XCTestCase {
         XCTAssertFalse(LogSessionPolicy.shouldStopForLostGPS(gpsAvailable: true))
     }
 
+    /// Encodes fusion `dr_state` fields.
+    func testDRStateLine() throws {
+        let obj = try decode(
+            LogEventEncoder.drStateLine(
+                timestamp: Date(timeIntervalSince1970: 300),
+                sMeters: 12,
+                speedMps: 4,
+                headingRad: 1.2,
+                coordinate: CLLocationCoordinate2D(latitude: 50.1, longitude: 30.2),
+                sigma: NavSigma(alongTrackMeters: 8, crossTrackMeters: 2, speedMps: 1, headingRad: 0.3)
+            )
+        )
+        XCTAssertEqual(obj["type"] as? String, "dr_state")
+        XCTAssertEqual(obj["s"] as? Double, 12)
+        XCTAssertEqual(obj["lat"] as? Double, 50.1)
+        XCTAssertEqual(obj["sigS"] as? Double, 8)
+    }
+
+    /// Encodes `zupt` and `snap` event types.
+    func testZuptAndSnapLines() throws {
+        let zupt = try decode(LogEventEncoder.zuptLine(timestamp: Date(), durationSec: 0.5))
+        XCTAssertEqual(zupt["type"] as? String, "zupt")
+        XCTAssertEqual(zupt["durationSec"] as? Double, 0.5)
+        let snap = try decode(
+            LogEventEncoder.snapLine(timestamp: Date(), residualMeters: 7, sMeters: 40)
+        )
+        XCTAssertEqual(snap["type"] as? String, "snap")
+        XCTAssertEqual(snap["residualM"] as? Double, 7)
+    }
+
     /// Parses one JSON object line.
     private func decode(_ line: String) throws -> [String: Any] {
         let data = Data(line.utf8)
