@@ -1,0 +1,17 @@
+# AI DevKit skill installs (machine-specific symlinks into ~/.ai-devkit)
+.cursor/skills/*
+.agents/
+.claude/
+.opencode/
+
+# AI DevKit local DBs / runtime
+.ai-devkit/
+
+# Xcode / Swift (future)
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+
+# OS
+.DS_Store
