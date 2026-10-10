@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Lab hub. Links to map routing and later sensor features.
+/// Lab hub. Links to map routing and sensor features.
 struct LabPlaceholderView: View {
     var body: some View {
         List {
@@ -9,8 +9,13 @@ struct LabPlaceholderView: View {
                     MapRoutingView()
                 }
             }
+            Section("Сенсори") {
+                NavigationLink("Sensor Hub") {
+                    SensorLabView()
+                }
+            }
             Section {
-                Text("Dual-track GPS ∥ DR, сенсори та EKF — наступні фічі.")
+                Text("Dual-track log і EKF — наступні фічі. Без GPS лог не пишемо.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }

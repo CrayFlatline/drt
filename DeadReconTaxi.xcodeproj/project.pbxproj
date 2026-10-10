@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A52A9E4F95F4178846ECBDD /* SensorSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3297CB146C244F1B95250E5C /* SensorSamples.swift */; };
+		86FB700586BE46E0B1AB530D /* MagTrust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83409BB500EC43C08ADE9015 /* MagTrust.swift */; };
+		013ABD5508574B4AA311C31D /* SensorHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03021DC259412B83502B95 /* SensorHub.swift */; };
+		CE8F9AA38473417A83696528 /* SensorLabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049AC2494B44A8DBD00A2DA /* SensorLabView.swift */; };
+		82ABDDF7509C4294863ADC2E /* MagTrustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF138D6DD24816AD034DB2 /* MagTrustTests.swift */; };
 		2AD061BA24F64ED5B459D1DF /* DeadReconTaxiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B1988ECD94AFFA963AF0F /* DeadReconTaxiApp.swift */; };
 		2BA2783C617243B094DE793D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84589D4086C445DEBFE08CCA /* RootView.swift */; };
 		831C07EAAFDF42AD8B9A1779 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E455A94F314C748711295C /* HomeView.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3297CB146C244F1B95250E5C /* SensorSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorSamples.swift; sourceTree = "<group>"; };
+		83409BB500EC43C08ADE9015 /* MagTrust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagTrust.swift; sourceTree = "<group>"; };
+		3D03021DC259412B83502B95 /* SensorHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorHub.swift; sourceTree = "<group>"; };
+		D049AC2494B44A8DBD00A2DA /* SensorLabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorLabView.swift; sourceTree = "<group>"; };
+		7BFF138D6DD24816AD034DB2 /* MagTrustTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagTrustTests.swift; sourceTree = "<group>"; };
 		DA867565B59F459586987C2B /* DeadReconTaxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeadReconTaxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F2095AB5DF441C9B59A94CD /* DeadReconTaxiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeadReconTaxiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27B1988ECD94AFFA963AF0F /* DeadReconTaxiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadReconTaxiApp.swift; sourceTree = "<group>"; };
@@ -67,12 +77,13 @@
 		71F6470E785942748B30E72B /* Products */ = {isa = PBXGroup; children = (DA867565B59F459586987C2B /* DeadReconTaxi.app */, 1F2095AB5DF441C9B59A94CD /* DeadReconTaxiTests.xctest */,); name = Products; sourceTree = "<group>"; };
 		F3C8A8405B0C4D64AD79ACD6 /* DeadReconTaxi */ = {isa = PBXGroup; children = (189D7FCD737941EB919AA346 /* App */, 95C79ADD9C9F45E3A6C11B58 /* Features */, 0C721DDAA4774C029B5F9AC5 /* Assets.xcassets */,); path = DeadReconTaxi; sourceTree = "<group>"; };
 		189D7FCD737941EB919AA346 /* App */ = {isa = PBXGroup; children = (F27B1988ECD94AFFA963AF0F /* DeadReconTaxiApp.swift */,); path = App; sourceTree = "<group>"; };
-		95C79ADD9C9F45E3A6C11B58 /* Features */ = {isa = PBXGroup; children = (561C2F7C7DE74215937CBF2A /* Home */, AFD0B7F00ABE419E8AF09EFA /* Lab */, CCFA9013665B41C1B904B245 /* MapRouting */,); path = Features; sourceTree = "<group>"; };
+		95C79ADD9C9F45E3A6C11B58 /* Features */ = {isa = PBXGroup; children = (561C2F7C7DE74215937CBF2A /* Home */, AFD0B7F00ABE419E8AF09EFA /* Lab */, CCFA9013665B41C1B904B245 /* MapRouting */,, 2DE9ADAA4686441C9798FFCB /* SensorHub */); path = Features; sourceTree = "<group>"; };
 		561C2F7C7DE74215937CBF2A /* Home */ = {isa = PBXGroup; children = (84589D4086C445DEBFE08CCA /* RootView.swift */, A1E455A94F314C748711295C /* HomeView.swift */, 618D13D9049046DB9A99E9B5 /* SigningNotesView.swift */,); path = Home; sourceTree = "<group>"; };
 		AFD0B7F00ABE419E8AF09EFA /* Lab */ = {isa = PBXGroup; children = (929D7E9972B14410B16A9435 /* LabPlaceholderView.swift */,); path = Lab; sourceTree = "<group>"; };
 		CCFA9013665B41C1B904B245 /* MapRouting */ = {isa = PBXGroup; children = (BF7E4413C6FB4395AFE9A3CC /* MapRoutingConfig.swift */, 532F7D2160C54CAB8C331DAB /* RouteModels.swift */, 2470BC26454D4007BE219AE6 /* PolylineDecoder.swift */, 9647E0C58A504217BA08C15A /* OSRMResponseParser.swift */, A3DE37AC034B49AD98AF600F /* RoutingClient.swift */, FA340ABCB4AD47BEB7613E6C /* MapLibreMapView.swift */, 6EA69151DB974FF089E32BD7 /* MapRoutingView.swift */,); path = MapRouting; sourceTree = "<group>"; };
-		EED652476EAC4BADA179D6F8 /* DeadReconTaxiTests */ = {isa = PBXGroup; children = (4779373DBE79435996168BB3 /* PolylineDecoderTests.swift */, 97524D8CACE141B99E41601F /* OSRMResponseParserTests.swift */, F68EAC5356D54204AE4F1918 /* Fixtures */,); path = DeadReconTaxiTests; sourceTree = "<group>"; };
+		EED652476EAC4BADA179D6F8 /* DeadReconTaxiTests */ = {isa = PBXGroup; children = (4779373DBE79435996168BB3 /* PolylineDecoderTests.swift */, 97524D8CACE141B99E41601F /* OSRMResponseParserTests.swift */, F68EAC5356D54204AE4F1918 /* Fixtures */,, 7BFF138D6DD24816AD034DB2 /* MagTrustTests.swift */); path = DeadReconTaxiTests; sourceTree = "<group>"; };
 		F68EAC5356D54204AE4F1918 /* Fixtures */ = {isa = PBXGroup; children = (E38A44EA37144E8CAE8FCC67 /* osrm_kyiv_sample.json */,); path = Fixtures; sourceTree = "<group>"; };
+		2DE9ADAA4686441C9798FFCB /* SensorHub */ = {isa = PBXGroup; children = (3297CB146C244F1B95250E5C /* SensorSamples.swift */, 83409BB500EC43C08ADE9015 /* MagTrust.swift */, 3D03021DC259412B83502B95 /* SensorHub.swift */, D049AC2494B44A8DBD00A2DA /* SensorLabView.swift */,); path = SensorHub; sourceTree = "<group>"; };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,8 +101,8 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8F2CF9D3D1B349E0AC9C33FF /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (2AD061BA24F64ED5B459D1DF /* DeadReconTaxiApp.swift in Sources */, 2BA2783C617243B094DE793D /* RootView.swift in Sources */, 831C07EAAFDF42AD8B9A1779 /* HomeView.swift in Sources */, 27988F80D28343E39F25BD17 /* SigningNotesView.swift in Sources */, 848B97EEEAFC4FE39E796B67 /* LabPlaceholderView.swift in Sources */, 33AA7C02CAC24A0C9FBB7772 /* MapRoutingConfig.swift in Sources */, 1312B385A49D4B4A841AC569 /* RouteModels.swift in Sources */, 5B44C77B21934B5E993A8744 /* PolylineDecoder.swift in Sources */, 61AD0E598D474325BB2081EC /* OSRMResponseParser.swift in Sources */, C7798E3577B549CE87A671D3 /* RoutingClient.swift in Sources */, C2A385986A384AB488EF08CE /* MapLibreMapView.swift in Sources */, C7A1E612FF2E4FB0A6FFEA24 /* MapRoutingView.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
-		9BA1E4296ADD4D838020A400 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (2FD087CB5FF74DBE954D92E7 /* PolylineDecoderTests.swift in Sources */, E4DA7C0BA5F24799A594B5BF /* OSRMResponseParserTests.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+		8F2CF9D3D1B349E0AC9C33FF /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (2AD061BA24F64ED5B459D1DF /* DeadReconTaxiApp.swift in Sources */, 2BA2783C617243B094DE793D /* RootView.swift in Sources */, 831C07EAAFDF42AD8B9A1779 /* HomeView.swift in Sources */, 27988F80D28343E39F25BD17 /* SigningNotesView.swift in Sources */, 848B97EEEAFC4FE39E796B67 /* LabPlaceholderView.swift in Sources */, 33AA7C02CAC24A0C9FBB7772 /* MapRoutingConfig.swift in Sources */, 1312B385A49D4B4A841AC569 /* RouteModels.swift in Sources */, 5B44C77B21934B5E993A8744 /* PolylineDecoder.swift in Sources */, 61AD0E598D474325BB2081EC /* OSRMResponseParser.swift in Sources */, C7798E3577B549CE87A671D3 /* RoutingClient.swift in Sources */, C2A385986A384AB488EF08CE /* MapLibreMapView.swift in Sources */, C7A1E612FF2E4FB0A6FFEA24 /* MapRoutingView.swift in Sources */, 3A52A9E4F95F4178846ECBDD /* SensorSamples.swift in Sources */, 86FB700586BE46E0B1AB530D /* MagTrust.swift in Sources */, 013ABD5508574B4AA311C31D /* SensorHub.swift in Sources */, CE8F9AA38473417A83696528 /* SensorLabView.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+		9BA1E4296ADD4D838020A400 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (2FD087CB5FF74DBE954D92E7 /* PolylineDecoderTests.swift in Sources */, E4DA7C0BA5F24799A594B5BF /* OSRMResponseParserTests.swift in Sources */, 82ABDDF7509C4294863ADC2E /* MagTrustTests.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
