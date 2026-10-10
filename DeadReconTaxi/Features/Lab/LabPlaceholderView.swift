@@ -13,9 +13,12 @@ struct LabPlaceholderView: View {
                 NavigationLink("Sensor Hub") {
                     SensorLabView()
                 }
+                NavigationLink("Log Store") {
+                    LogLabView()
+                }
             }
             Section {
-                Text("Dual-track log і EKF — наступні фічі. Без GPS лог не пишемо.")
+                Text("Без GPS лог сесії не пишемо. EKF — наступні фічі.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
